@@ -6,13 +6,9 @@ import { GridController } from './DisplayGrid/GridController';
 
 function OutputGrid(props) {
 
-    const [gridCtlr, setCtrl] = useState(null);
+    const [gridCtlr, setCtrl] = useState(new GridController("atlan"));
     const [columnDefs, setColumnDefs] = useState([]);
     const [rowData, setRowData] = useState([]);
-
-    useEffect(() => {
-        setCtrl(new GridController("atlan"));
-    }, []);
 
     useEffect(() => {
         if (props.data && props.data.length) {

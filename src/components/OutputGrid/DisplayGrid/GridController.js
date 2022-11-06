@@ -2,10 +2,6 @@ import EventEmitter from '../../../utils/EventEmitter';
 
 export class GridController extends EventEmitter {
 
-    constructor() {
-        super();
-    }
-
     getColumnDefs(data) {
         // Load the grid with the snapshot data 
         if (data && data.length) {
