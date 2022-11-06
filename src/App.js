@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import QueryEditor from './components/QueryEditor/QueryEditor';
+import OutputGrid from './components/OutputGrid/OutputGrid';
+import Header from './components/Header/Header';
+import ApiService from './services/ApiService';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+	const [gridData, setGridData] = useState([]);
+	const [showTable, setShowTable] = useState(false);
+
+	const runQuery = (query) => {
+		setShowTable(true);
+		ApiService.ExecuteQuery(query)
+			.then((data) => {
+				setGridData(data.data.products)
+			})
+			.catch(err => console.log(err));
+	}
+
+	return (
+		<>
+			<Header />
+			<QueryEditor runQuery={runQuery} />
+			{
+				showTable ?
+					<OutputGrid data={gridData} />
+					: null
+			}
+		</>
+	);
 }
 
 export default App;

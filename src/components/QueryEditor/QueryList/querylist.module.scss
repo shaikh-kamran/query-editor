@@ -1,0 +1,27 @@
+.querylist{
+    position: fixed;
+    padding: 10px;
+    z-index: 99;
+    border-radius: 5px;
+    top: 10%;
+    background-color: #fff;
+    left: 30%;
+    width: 40%;
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .header{
+        border-bottom: 1px solid #888;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px;
+    }
+    .note{
+        font-size: 14px;
+        padding: 10px;
+    }
+    .query{
+        padding: 5px;
+        cursor: pointer;
+    }
+}

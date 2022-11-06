@@ -1,0 +1,33 @@
+.queryeditorblock{
+    margin-top: 50px;
+    padding: 10px;
+    .queryeditor{
+        border: 1px solid #888;
+        padding: 10px;
+    }
+    .controlblock{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        text-align: right;
+        .savebutton,
+        .showquerylist,
+        .copybutton{ 
+            margin-bottom: 2px;
+            padding: 5px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        .runbutton{
+            background-color: green;
+            color: white;
+            margin-bottom: 2px;
+            padding: 5px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+    }
+}
