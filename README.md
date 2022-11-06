@@ -1,11 +1,10 @@
-# Getting Started with Create React App
+# Query Runner
 
-Query Runner
+This App can be use to run Database Queries from UI.
 
 ## Available Scripts
 
-This App can be use to run Database Queries from UI.
-This app is build using React JS
+This app is build using React JS and served by Express JS app
 
 ### `npm start`
 
