@@ -17,9 +17,8 @@ Builds the app for production to the `build` folder.\
 
 ### `Dependencies use`
 
-Express JS: to serve static files
-React Code Editor: Element for query input
-React AG Grid: to show data
-
+Express JS: to serve static files\
+React Code Editor: Element for query input\
+React AG Grid: to show data\
 Dummy API to generate data: https://dummyjson.com/products/
 
