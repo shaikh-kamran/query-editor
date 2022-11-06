@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from './querylist.module.scss';
 import { getQuerylistInLocal } from '../../../utils/LocalStorage';
 import { FaWindowClose } from 'react-icons/fa';

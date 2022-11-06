@@ -7,6 +7,4 @@ const ExecuteQuery = (query) => {
     return axios.get(BASE_API + QUERY_API);
 }
 
-export default {
-    ExecuteQuery
-};
+export default ExecuteQuery;

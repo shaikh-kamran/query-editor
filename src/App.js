@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import QueryEditor from './components/QueryEditor/QueryEditor';
 import OutputGrid from './components/OutputGrid/OutputGrid';
 import Header from './components/Header/Header';
-import ApiService from './services/ApiService';
+import ExecuteQuery from './services/ApiService';
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
 
 	const runQuery = (query) => {
 		setShowTable(true);
-		ApiService.ExecuteQuery(query)
+		ExecuteQuery(query)
 			.then((data) => {
 				setGridData(data.data.products)
 			})

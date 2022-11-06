@@ -28,7 +28,7 @@ export class GridController extends EventEmitter {
 
         let coldefs = [];
         Object.keys(columns).forEach(column => {
-            if (column != 'images')
+            if (column !== 'images')
                 coldefs.push(this.getColumnDef(column));
         });
 
