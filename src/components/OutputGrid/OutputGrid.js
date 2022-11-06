@@ -6,7 +6,7 @@ import { GridController } from './DisplayGrid/GridController';
 
 function OutputGrid(props) {
 
-    const [gridCtlr, setCtrl] = useState(new GridController("atlan"));
+    const [gridCtlr] = useState(new GridController("atlan"));
     const [columnDefs, setColumnDefs] = useState([]);
     const [rowData, setRowData] = useState([]);
 
@@ -17,7 +17,7 @@ function OutputGrid(props) {
             setColumnDefs(defs);
             setRowData(tabledata);
         }
-    }, [props.data])
+    }, [props.data, gridCtlr])
 
     return (
         <div className={styles.gridblock}>
